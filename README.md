@@ -30,5 +30,6 @@ Una vez instalado Java 11, sbt y el plugin de Scala en IntelliJ IDEA, puedes seg
 4. Ejecuta el comando `sbt run` para compilar y ehecutar el proyecto.
 5. La API estará disponible en la dirección local especificada por sbt, se ejecutara en el puerto 9000.
 6. abrir en un navegador la siguiente ruta para crear las tablas de la base de datos http://localhost:9000/dbInit
+7. En el archivo WeatherApp.postman_collection.json que se encuentra en la carpeta raiz del proyecto, estara la coleccion de postman para utilizar la api
 
 ¡Disfruta de la experiencia de consultar el clima con esta API!

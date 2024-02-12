@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "77c4c65c-8813-4ace-93ad-896fccf5ea29",
+		"name": "WeatherApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29354478"
+	},
+	"item": [
+		{
+			"name": "Location",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/weather/medellin,co",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"weather",
+						"medellin,co"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "History",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/weather/history",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"weather",
+						"history"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
