@@ -28,10 +28,14 @@ class ReportRepository @Inject() (protected val dbConfigProvider: DatabaseConfig
     db.run(allReports.result)
   }
 
-  def create (report: Report) = {
-    val insert = movieQuery += report
-    db.run(insert)
-      .flatMap(_ => getOne(report.id.getOrElse("")))
+  def create(report: Report) = {
+    val reportById = movieQuery.filter(_.id === report.id)
+    db.run(reportById.result.headOption).flatMap {
+      case Some(_) => db.run(reportById.result.headOption)
+      case None =>
+        val insert = movieQuery += report
+        db.run(insert).flatMap(_ => getOne(report.id.getOrElse("")))
+    }
   }
 
   def getOne (id : String) = {
